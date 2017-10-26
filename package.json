@@ -1,0 +1,53 @@
+{
+  "name": "util.constants",
+  "version": "0.0.0",
+  "author": "jmquigley <jmquigley@outlook.com>",
+  "description": "General programming constants and regex strings",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmquigley/util.constants"
+  },
+  "bugs": {
+    "url": "https://github.com/jmquigley/util.constants/issues"
+  },
+  "engines": {
+    "node": ">=7.5"
+  },
+  "dependencies": {
+    "util.pkgwrap": "0.0.72"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.47",
+    "ava": "^0.23.0",
+    "coveralls": "^3.0.0",
+    "debug": "^3.1.0",
+    "nyc": "^11.2.1",
+    "tslint": "^5.8.0",
+    "typescript": "^2.5.3"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "all": "yarn install && yarn run clean && yarn run lint && yarn run build && yarn test && yarn run report",
+    "build": "pkgwrap --build",
+    "clean": "pkgwrap --clean",
+    "coverage": "pkgwrap --coverage",
+    "lint": "pkgwrap --lint",
+    "postinstall": "pkgwrap --postinstall",
+    "report": "pkgwrap --reporting",
+    "test": "pkgwrap --testing --ava"
+  },
+  "ava": {
+    "babel": "inherit"
+  },
+  "pkgwrap": {
+    "cleanup": [
+      "index.d.ts",
+      "index.js",
+      "test.d.ts",
+      "test.js"
+    ]
+  }
+}
