@@ -1,6 +1,6 @@
 {
   "name": "util.constants",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "General programming constants and regex strings",
   "private": false,
@@ -44,7 +44,7 @@
     "coverage": "pkgwrap --coverage",
     "lint": "pkgwrap --lint",
     "preinstall": "yarn global add util.pkgwrap",
-		"prepublishOnly": "yarn run all",
+    "prepublishOnly": "yarn run all",
     "report": "pkgwrap --reporting",
     "test": "pkgwrap --testing --ava"
   }
