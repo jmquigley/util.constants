@@ -3,6 +3,8 @@
   "version": "0.0.6",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "General programming constants and regex strings",
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "private": false,
   "license": "MIT",
   "repository": {
@@ -22,10 +24,9 @@
     "debug": "^3.1.0",
     "nyc": "^11.3.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.2"
+    "typescript": "^2.6.2",
+    "util.pkgwrap": "^0.0.88"
   },
-  "main": "./index.js",
-  "types": "./index.d.ts",
   "ava": {
     "babel": "inherit"
   },
@@ -43,7 +44,6 @@
     "clean": "pkgwrap --clean",
     "coverage": "pkgwrap --coverage",
     "lint": "pkgwrap --lint",
-    "preinstall": "yarn global add util.pkgwrap",
     "prepublishOnly": "yarn run all",
     "report": "pkgwrap --reporting",
     "test": "pkgwrap --testing --ava"
