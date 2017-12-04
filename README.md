@@ -36,5 +36,6 @@ This module contains reusable string constants and regex patterns.
 ## regex patterns
 
 - `regexEmail` - matches [99.99% of all email](http://www.regular-expressions.info/email.html) addresses in use today
+- `regexNumber` - matches a decimal number (e.g. 123, -123, -1.23)
 - `regexURL` - matches a [Uniform Resource Locator (URL)](https://en.wikipedia.org/wiki/URL)
 - `regexUUID` - matches a [universally unique id (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier)

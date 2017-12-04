@@ -3,6 +3,7 @@
 import test from 'ava';
 import {
 	regexEmail,
+	regexNumber,
 	regexURL,
 	regexUUID,
 	sp
@@ -65,4 +66,13 @@ test('Test creating a string with non-breaking space (sp)', t => {
 
 	t.truthy(spaces);
 	t.is(spaces.length, 3);
+});
+
+test('Test matching a number with regex', t => {
+	t.is('123abc'.match(regexNumber)[0], '123');
+	t.is('1.23abc'.match(regexNumber)[0], '1.23');
+	t.is('+1.23abc'.match(regexNumber)[0], '+1.23');
+	t.is('-1.23abc'.match(regexNumber)[0], '-1.23');
+	t.is('abc-1.23abc'.match(regexNumber)[0], '-1.23');
+	t.is('abc+1.23abc'.match(regexNumber)[0], '+1.23');
 });
