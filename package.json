@@ -1,6 +1,6 @@
 {
   "name": "util.constants",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "General programming constants and regex strings",
   "main": "./index.js",
@@ -38,7 +38,13 @@
     "coveragePathIgnorePatterns": [
       "<rootDir>/node_modules/"
     ],
-    "moduleFileExtensions": ["js", "jsx", "ts", "tsx", "json"],
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx",
+      "json"
+    ],
     "notify": false,
     "testPathIgnorePatterns": [
       "<rootDir>/node_modules/"
