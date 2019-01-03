@@ -18,9 +18,7 @@
 		"target": "es6"
 	},
 	"exclude": [
-		"coverage",
-		"docs",
 		"node_modules",
-		"public"
+		"__tests__"
 	]
 }

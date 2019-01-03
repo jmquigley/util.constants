@@ -19,30 +19,42 @@
   },
   "devDependencies": {
     "@types/node": "^10.12.18",
-    "ava": "^1.0.1",
-    "coveralls": "^3.0.2",
     "debug": "^4.1.1",
-    "nyc": "^13.1.0",
+    "jest": "^23.6.0",
     "tslint": "^5.12.0",
     "typescript": "^3.2.2",
-    "util.pkgwrap": "^0.0.93"
+    "typescript-babel-jest": "^1.0.5",
+    "util.pkgwrap": "^0.0.94"
   },
   "pkgwrap": {
+    "bail": true,
     "cleanup": [
       "index.d.ts",
-      "index.js",
-      "test.d.ts",
-      "test.js"
+      "index.js"
     ]
   },
+  "jest": {
+    "collectCoverage": true,
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "moduleFileExtensions": ["js", "jsx", "ts", "tsx", "json"],
+    "notify": false,
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "transform": {
+      "^.+\\.ts?$": "typescript-babel-jest"
+    },
+    "verbose": false
+  },
   "scripts": {
-    "all": "yarn install && yarn run build && yarn test && yarn run report",
+    "all": "yarn install && yarn run build && yarn test",
     "build": "yarn run clean && yarn run lint && pkgwrap --build",
     "clean": "pkgwrap --clean",
-    "coverage": "pkgwrap --coverage",
     "lint": "pkgwrap --lint",
     "prepublishOnly": "yarn run all",
-    "report": "pkgwrap --reporting",
-    "test": "pkgwrap --testing --ava"
+    "test": "pkgwrap --testing --jest"
   }
 }

@@ -1,15 +1,14 @@
 'use strict';
 
-import test from 'ava';
 import {
 	regexEmail,
 	regexNumber,
 	regexURL,
 	regexUUID,
 	sp
-} from './index';
+} from '../index';
 
-test('Test Email regex string', t => {
+test('Test Email regex string', () => {
 	const addrs: string[] = [
 		'email@example.com',
 		'firstname.lastname@example.com',
@@ -24,28 +23,28 @@ test('Test Email regex string', t => {
 		'firstname-lastname@example.com'
 	];
 
-	t.truthy(regexEmail);
+	expect(regexEmail).toBeTruthy();
 
 	for (const addr of addrs) {
-		t.regex(addr, regexEmail);
+		expect(addr).toMatch(regexEmail);
 	}
 });
 
-test('Test URL regex string', t => {
+test('Test URL regex string', () => {
 	const urls: string[] = [
 		'http://example.com',
 		'http://google.com',
 		'http://something.org'
 	];
 
-	t.truthy(regexURL);
+	expect(regexURL).toBeTruthy();
 
 	for (const url of urls) {
-		t.regex(url, regexURL);
+		expect(url).toMatch(regexURL);
 	}
 });
 
-test('Test UUID regex string', t => {
+test('Test UUID regex string', () => {
 	const uuids: string[] = [
 		'a19c0def-29c1-48d7-8229-08a51cbdc287',
 		'7e922c13-1c02-47bc-bc0e-48f25c9524f5',
@@ -54,25 +53,25 @@ test('Test UUID regex string', t => {
 		'2c69a57c-6930-487c-8c2e-154fcff66f19'
 	];
 
-	t.truthy(regexUUID);
+	expect(regexUUID).toBeTruthy();
 
 	for (const uuid of uuids) {
-		t.regex(uuid, regexUUID);
+		expect(uuid).toMatch(regexUUID);
 	}
 });
 
-test('Test creating a string with non-breaking space (sp)', t => {
+test('Test creating a string with non-breaking space (sp)', () => {
 	const spaces: string = sp + sp + sp;
 
-	t.truthy(spaces);
-	t.is(spaces.length, 3);
+	expect(spaces).toBeTruthy()
+	expect(spaces.length).toBe(3)
 });
 
-test('Test matching a number with regex', t => {
-	t.is('123abc'.match(regexNumber)[0], '123');
-	t.is('1.23abc'.match(regexNumber)[0], '1.23');
-	t.is('+1.23abc'.match(regexNumber)[0], '+1.23');
-	t.is('-1.23abc'.match(regexNumber)[0], '-1.23');
-	t.is('abc-1.23abc'.match(regexNumber)[0], '-1.23');
-	t.is('abc+1.23abc'.match(regexNumber)[0], '+1.23');
+test('Test matching a number with regex', () => {
+	expect('123abc'.match(regexNumber)[0]).toBe('123');
+	expect('1.23abc'.match(regexNumber)[0]).toBe('1.23');
+	expect('+1.23abc'.match(regexNumber)[0]).toBe('+1.23');
+	expect('-1.23abc'.match(regexNumber)[0]).toBe('-1.23');
+	expect('abc-1.23abc'.match(regexNumber)[0]).toBe('-1.23');
+	expect('abc+1.23abc'.match(regexNumber)[0]).toBe('+1.23');
 });
