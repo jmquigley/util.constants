@@ -1,6 +1,6 @@
 {
   "name": "util.constants",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "author": "jmquigley <jmquigley@outlook.com>",
   "description": "General programming constants and regex strings",
   "main": "./index.js",
