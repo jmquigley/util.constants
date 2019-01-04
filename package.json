@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "^10.12.18",
+    "coveralls": "^3.0.0",
     "debug": "^4.1.1",
     "jest": "^23.6.0",
     "tslint": "^5.12.0",
