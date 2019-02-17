@@ -1,6 +1,9 @@
 node_modules/
 
 test/
+__tests__
+docs
+logs
 tsconfig.json
 tslint.json
 .travis.yml
@@ -8,9 +11,9 @@ tslint.json
 .gitignore
 .gitattributes
 
-
 coverage
 .nyc_output
+*.tgz
 *.ts
 !*.d.ts
 test.js
@@ -18,13 +21,10 @@ test.d.ts
 
 *.js.map
 jsdoc.json
-gulpfile.js
-server.*
-.awcache
-.babelrc
-.DS_Store
-docs/
-public/
-webpack.config.js
+gulpfile.*
 yarn.lock
 yarn-error.log
+.babelrc
+.prettierignore
+.prettierrc
+jest.config.js
