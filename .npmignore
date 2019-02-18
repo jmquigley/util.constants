@@ -18,6 +18,7 @@ coverage
 !*.d.ts
 test.js
 test.d.ts
+index.js
 
 *.js.map
 jsdoc.json

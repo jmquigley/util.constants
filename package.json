@@ -3,8 +3,6 @@
 	"version": "0.0.17",
 	"author": "jmquigley <jmquigley@outlook.com>",
 	"description": "General programming constants and regex strings",
-	"main": "./index.js",
-	"types": "./index.d.ts",
 	"private": false,
 	"license": "MIT",
 	"repository": {
@@ -17,6 +15,8 @@
 	"engines": {
 		"node": ">=7.x"
 	},
+	"main": "./index.min.js",
+	"types": "./index.d.ts",
 	"devDependencies": {
 		"@babel/core": "^7.3.3",
 		"@babel/preset-env": "^7.3.1",
@@ -24,6 +24,7 @@
 		"@babel/runtime": "^7.3.1",
 		"@types/jest": "^24.0.5",
 		"@types/node": "^11.9.4",
+		"babel-minify": "^0.5.0",
 		"coveralls": "^3.0.2",
 		"debug": "^4.1.1",
 		"jest": "^24.1.0",
@@ -31,24 +32,18 @@
 		"tslint": "^5.12.1",
 		"tslint-config-prettier": "^1.18.0",
 		"typescript": "^3.3.3",
-		"util.pkgwrap": "^0.0.97"
-	},
-	"pkgwrap": {
-		"bail": true,
-		"cleanup": [
-			"index.d.ts",
-			"index.js"
-		]
+		"util.pkgwrap": "^0.0.98"
 	},
 	"scripts": {
-		"all": "yarn install && yarn run prettier && yarn run build && yarn test",
-		"build": "yarn run clean && yarn run lint && pkgwrap --build",
+		"all": "yarn install && yarn prettier && yarn build && yarn test && yarn minify",
+		"build": "yarn clean && yarn lint && pkgwrap --build",
 		"clean": "pkgwrap --clean",
-		"clean:dist": "yarn run clean && rimraf node_modules/ yarn.lock",
+		"clean:dist": "yarn clean && rimraf node_modules/ yarn.lock",
 		"coverage": "pkgwrap --coverage --jest",
 		"lint": "pkgwrap --lint",
+		"minify": "minify ./index.js --out-file ./index.min.js",
 		"prepublishOnly": "yarn run all",
 		"prettier": "prettier --write \"**/*.{ts,tsx,js,json,yaml,yml,css}\"",
-		"test": "pkgwrap --testing --jest"
+		"test": "jest"
 	}
 }
