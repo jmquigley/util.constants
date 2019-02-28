@@ -25,6 +25,7 @@
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",
 		"@babel/core": "^7.3.4",
+		"@babel/plugin-transform-modules-umd": "^7.2.0",
 		"@babel/preset-env": "^7.3.4",
 		"@babel/preset-typescript": "^7.3.3",
 		"@babel/runtime": "^7.3.4",
@@ -43,9 +44,9 @@
 	},
 	"scripts": {
 		"all": "yarn install && yarn build && yarn test",
-		"build": "yarn clean && yarn lint && yarn prettier && yarn build:umd && yarn build:es",
-		"build:umd": "tsc -p . && minify index.js --out-file index.umd.min.js",
-		"build:es": "babel index.js --out-file index.es.min.js",
+		"build": "yarn clean && yarn lint && yarn prettier && yarn build:es && yarn build:umd",
+		"build:es": "tsc -p . && minify index.js --out-file index.es.min.js",
+		"build:umd": "babel index.js --out-file index.umd.min.js",
 		"clean": "pkgwrap --clean",
 		"clean:dist": "yarn clean && rimraf node_modules/ yarn.lock",
 		"coverage": "pkgwrap --coverage --jest",

@@ -15,7 +15,7 @@
 		"sourceMap": true,
 		"strictNullChecks": false,
 		"suppressImplicitAnyIndexErrors": true,
-		"module": "umd",
+		"module": "commonjs",
 		"moduleResolution": "node",
 		"target": "es6"
 	},
