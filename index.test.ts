@@ -1,6 +1,6 @@
 "use strict";
 
-import {regexEmail, regexNumber, regexURL, regexUUID, sp} from "../index";
+import {regexEmail, regexNumber, regexURL, regexUUID, sp} from "./index";
 
 test("Test Email regex string", () => {
 	const addrs: string[] = [
