@@ -1,6 +1,6 @@
 {
 	"name": "util.constants",
-	"version": "0.0.24",
+	"version": "0.0.25",
 	"author": "jmquigley <jmquigley@outlook.com>",
 	"description": "General programming constants and regex strings",
 	"private": false,
@@ -52,7 +52,6 @@
 		"coverage": "pkgwrap --coverage --jest",
 		"lint": "pkgwrap --lint",
 		"manifest": "npm pack --dry-run",
-		"prepublishOnly": "yarn run all",
 		"prettier": "prettier --write \"**/*.{ts,tsx,js,json,yaml,yml,css}\"",
 		"test": "jest"
 	}
