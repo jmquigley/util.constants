@@ -1,6 +1,7 @@
 "use strict";
 
 export const encoding = "utf8";
+export const millisPerSecond = 1000;
 export const nl: string = "\n";
 export const sp: string = "\u200b"; // zero width, non breaking space
 

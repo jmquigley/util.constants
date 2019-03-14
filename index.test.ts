@@ -1,8 +1,24 @@
 "use strict";
 
-import {regexEmail, regexNumber, regexURL, regexUUID, sp} from "./index";
+import {
+	encoding,
+	millisPerSecond,
+	nl,
+	sp,
+	regexEmail,
+	regexNumber,
+	regexURL,
+	regexUUID
+} from "./index";
 
-test("Test Email regex string", () => {
+test("Verify constant values", () => {
+	expect(encoding).toBe("utf8");
+	expect(millisPerSecond).toBe(1000);
+	expect(nl).toBe("\n");
+	expect(sp).toBe("\u200b");
+});
+
+test("Email regex string", () => {
 	const addrs: string[] = [
 		"email@example.com",
 		"firstname.lastname@example.com",
@@ -24,7 +40,7 @@ test("Test Email regex string", () => {
 	}
 });
 
-test("Test URL regex string", () => {
+test("URL regex string", () => {
 	const urls: string[] = [
 		"http://example.com",
 		"http://google.com",
@@ -38,7 +54,7 @@ test("Test URL regex string", () => {
 	}
 });
 
-test("Test UUID regex string", () => {
+test("UUID regex string", () => {
 	const uuids: string[] = [
 		"a19c0def-29c1-48d7-8229-08a51cbdc287",
 		"7e922c13-1c02-47bc-bc0e-48f25c9524f5",
@@ -54,7 +70,7 @@ test("Test UUID regex string", () => {
 	}
 });
 
-test("Test creating a string with non-breaking space (sp)", () => {
+test("creating a string with non-breaking space (sp)", () => {
 	const spaces: string = sp + sp + sp;
 
 	expect(spaces).toBeTruthy();

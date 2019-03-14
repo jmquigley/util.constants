@@ -26,13 +26,16 @@ $ yarn run all
 
 
 ## Overview
-This module contains reusable string constants and regex patterns.
+This module contains reusable string/number constants and regex patterns.
 
 
 ## Constants
 
-- `nl` -- Unix newline character string '\n'
-- `sp` -- zero width non breaking space character (unicode u+200b)
+- `encoding` - the default string encoding value used for buffers (utf8)
+- `millisPerSecond` - the number of milliseconds in one second (1000)
+- `nl` - Unix newline character string '\n'
+- `sp` - zero width non breaking space character (unicode u+200b)
+
 
 ## regex patterns
 
