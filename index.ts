@@ -1,9 +1,9 @@
-"use strict";
-
 export const encoding = "utf8";
+export const failure: number = 127;
 export const millisPerSecond = 1000;
 export const nl: string = "\n";
 export const sp: string = "\u200b"; // zero width, non breaking space
+export const success: number = 0;
 
 // Uses a regex that will catch 99.99% of email addresses in use today.  It is not perfect
 // http://www.regular-expressions.info/email.html

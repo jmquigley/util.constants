@@ -32,9 +32,11 @@ This module contains reusable string/number constants and regex patterns.
 ## Constants
 
 - `encoding` - the default string encoding value used for buffers (utf8)
+- `failure` - exit code for failure representing the number 127
 - `millisPerSecond` - the number of milliseconds in one second (1000)
 - `nl` - Unix newline character string '\n'
 - `sp` - zero width non breaking space character (unicode u+200b)
+- `success` - exit code for success representing the number 0
 
 
 ## regex patterns

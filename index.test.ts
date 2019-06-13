@@ -2,20 +2,24 @@
 
 import {
 	encoding,
+	failure,
 	millisPerSecond,
 	nl,
-	sp,
 	regexEmail,
 	regexNumber,
 	regexURL,
-	regexUUID
+	regexUUID,
+	sp,
+	success
 } from "./index";
 
 test("Verify constant values", () => {
 	expect(encoding).toBe("utf8");
+	expect(failure).toBe(127);
 	expect(millisPerSecond).toBe(1000);
 	expect(nl).toBe("\n");
 	expect(sp).toBe("\u200b");
+	expect(success).toBe(0);
 });
 
 test("Email regex string", () => {
