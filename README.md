@@ -2,12 +2,11 @@
 
 > General programming constants and regex strings
 
-[![build](https://circleci.com/gh/jmquigley/util.constants/tree/master.svg?style=shield)](https://circleci.com/gh/jmquigley/util.constants/tree/master)
+[![build](https://github.com/jmquigley/util.constants/workflows/build/badge.svg)](https://github.com/jmquigley/util.constants/actions)
 [![analysis](https://img.shields.io/badge/analysis-tslint-9cf.svg)](https://palantir.github.io/tslint/)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 [![testing](https://img.shields.io/badge/testing-jest-blue.svg)](https://facebook.github.io/jest/)
 [![NPM](https://img.shields.io/npm/v/util.constants.svg)](https://www.npmjs.com/package/util.constants)
-[![coverage](https://coveralls.io/repos/github/jmquigley/util.constants/badge.svg?branch=master)](https://coveralls.io/github/jmquigley/util.constants?branch=master)
 
 
 ## Installation
