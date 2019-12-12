@@ -38,6 +38,15 @@ jspm_packages
 .DS_Store
 tmp-unit-test-data
 
+.git
+build
+coverage
+dist
+docs
+highlights
+vendor
+
+*.min.js
 *.tgz
 *.js
 *.js.map
